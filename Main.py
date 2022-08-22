@@ -1,7 +1,7 @@
 import pygame as pg
 import sys
 from Const import *
-
+from Game import Game
 
 class Main:
 
@@ -9,9 +9,14 @@ class Main:
         pg.init()
         self.screen = pg.display.set_mode((WIDTH, HEIGHT))
         pg.display.set_caption("CHESS")
+        self.game = Game()
 
     def main_loop(self):
+        game = self.game
+        screen = self.screen
+
         while True:
+            game.show_bg(screen)
             for event in pg.event.get():
                 if event.type == pg.QUIT:
                     pg.quit()

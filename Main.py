@@ -3,6 +3,7 @@ import sys
 from Const import *
 from Game import Game
 
+
 class Main:
 
     def __init__(self):
@@ -23,6 +24,7 @@ class Main:
                     sys.exit()
 
             pg.display.update()
+
 
 main = Main()
 main.main_loop()

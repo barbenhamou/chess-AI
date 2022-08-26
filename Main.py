@@ -18,6 +18,8 @@ class Main:
 
         while True:
             game.show_bg(screen)
+            game.show_pieces(screen)
+
             for event in pg.event.get():
                 if event.type == pg.QUIT:
                     pg.quit()
